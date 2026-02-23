@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     * {
       box-sizing: border-box;
       font-family: Arial, Helvetica, sans-serif;
     }
+
     body {
       margin: 0;
       height: 100vh;
@@ -17,54 +19,56 @@
       align-items: center;
       background: linear-gradient(135deg, #006a4e, #4f42a1);
     }
+
     .register-box {
-      background: #fff;
+      background: #ffffff;
       padding: 30px;
       width: 100%;
       max-width: 380px;
       border-radius: 12px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.2);
     }
+
     .register-box h2 {
       text-align: center;
       margin-bottom: 20px;
-      color: #006a4e;
+      color: #333;
     }
-    .form-group {
-      margin-bottom: 15px;
-    }
-    .form-group label {
-      display: block;
-      margin-bottom: 6px;
-      font-size: 14px;
-      font-weight: bold;
-    }
-    .form-group input {
+
+    .register-box input {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
+      margin-bottom: 15px;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 14px;
     }
-    .btn {
+
+    .register-box input:focus {
+      outline: none;
+      border-color: #006a4e;
+    }
+
+    .register-box button {
       width: 100%;
       padding: 12px;
       background: #006a4e;
-      color: #fff;
       border: none;
-      border-radius: 8px;
+      color: #fff;
       font-size: 16px;
-      font-weight: bold;
+      border-radius: 6px;
       cursor: pointer;
     }
-    .btn:hover {
-      background: #00563f;
+
+    .register-box button:hover {
+      background: #00543e;
     }
+
     .footer-text {
       text-align: center;
       margin-top: 15px;
       font-size: 13px;
-      color: #666;
+      color: #777;
     }
   </style>
 </head>
@@ -75,27 +79,12 @@
     <h2>Create Account</h2>
 
     <form>
-      <div class="form-group">
-        <label>Name</label>
-        <input type="text" placeholder="Enter your name" required>
-      </div>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="password" placeholder="Password" required>
+      <input type="password" placeholder="Confirm Password" required>
 
-      <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" placeholder="Enter phone number" required>
-      </div>
-
-      <div class="form-group">
-        <label>Password</label>
-        <input type="password" placeholder="Enter password" required>
-      </div>
-
-      <div class="form-group">
-        <label>Confirm Password</label>
-        <input type="password" placeholder="Confirm password" required>
-      </div>
-
-      <button class="btn" type="submit">Register</button>
+      <button type="submit">Register</button>
     </form>
 
     <div class="footer-text">
